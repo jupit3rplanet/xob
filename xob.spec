@@ -7,6 +7,7 @@ Group:          Graphical desktop/Other
 URL:            https://github.com/florentc/xob
 Source0:        https://github.com/florentc/xob/archive/refs/tags/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+BuildRequires:  make
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xrender)
 BuildRequires:  pkgconfig(libconfig)
