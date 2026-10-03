@@ -22,8 +22,9 @@ windows, which vanishes after a configurable timeout.
 %autosetup -p1
 
 %build
-%make_build CC="%{__cc}" CFLAGS="%{optflags}" LDFLAGS="%{build_ldflags}" \
-    prefix=%{_prefix} sysconfdir=%{_sysconfdir}
+export CFLAGS="%{optflags}"
+export LDFLAGS="%{build_ldflags}"
+%make_build CC="%{__cc}" prefix=%{_prefix} sysconfdir=%{_sysconfdir}
 
 %install
 %make_install prefix=%{_prefix} sysconfdir=%{_sysconfdir}
